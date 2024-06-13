@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+#input {
+  height: 40px;
+  width: 100px;
+}
+#btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+#btn:hover {
+  color: white;
+  background-color: black;
+}
+.red {
+  background-color: red;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.red-container,
+.blue-container,
+.green-container {
+  display: flex;
+}
+.blue {
+  background-color: blue;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.green {
+  background-color: green;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+@keyframes red-drop {
+  to {
+    transform: translate(10vh, 90vh);
+  }
+}
+.red-animate {
+  animation: red-drop 3s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes blue-drop {
+  to {
+    transform: translate(-15vh, 90vh);
+  }
+}
+.blue-animate {
+  animation: blue-drop 3s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes green-drop {
+  to {
+    transform: translate(-40vh, 90vh);
+  }
+}
+.green-animate {
+  animation: green-drop 3s 1;
+  animation-fill-mode: forwards;
+}
+.box {
+  height: 50vh;
+  width: 60vw;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  border: solid 4px black;
+  border-top: solid 4px white;
+  border-radius: 5%;
+}
