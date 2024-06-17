@@ -1,19 +1,23 @@
 .container {
   display: flex;
   justify-content: space-between;
+
+  height: 10vh;
+  width: 99vw;
 }
 #input {
-  height: 40px;
-  width: 100px;
+  height: 5vh;
+  width: 7vw;
 }
 #btn {
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
+  width: 8vw;
+  height: 5vh;
+  border-radius: 0.5vw;
   color: black;
   background-color: white;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  font-size: 2vmin;
 }
 #btn:hover {
   color: white;
@@ -22,8 +26,8 @@
 .red {
   background-color: red;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 7vh;
+  width: 3.25vw;
 }
 .red-container,
 .blue-container,
@@ -33,18 +37,18 @@
 .blue {
   background-color: blue;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 7vh;
+  width: 3.25vw;
 }
 .green {
   background-color: green;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 7vh;
+  width: 3.25vw;
 }
 @keyframes red-drop {
   to {
-    transform: translate(10vh, 90vh);
+    transform: translate(5vw, 90vh);
   }
 }
 .red-animate {
@@ -53,7 +57,7 @@
 }
 @keyframes blue-drop {
   to {
-    transform: translate(-15vh, 90vh);
+    transform: translate(-4vw, 90vh);
   }
 }
 .blue-animate {
@@ -62,7 +66,7 @@
 }
 @keyframes green-drop {
   to {
-    transform: translate(-40vh, 90vh);
+    transform: translate(-15vw, 90vh);
   }
 }
 .green-animate {
@@ -76,6 +80,6 @@
   bottom: 0;
   left: 25%;
   border: solid 4px black;
-  border-top: solid 4px white;
+  border-top-style: none;
   border-radius: 5%;
 }

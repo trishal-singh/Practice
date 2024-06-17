@@ -1,35 +1,33 @@
 let input = document.getElementById("input");
 let btn = document.getElementById("btn");
-let i = 0,
-  j = 0,
-  k = 0;
+let st = new Set();
+let index = 0;
 let handleBtn = () => {
   let n = input.value;
 
-  let red = document.getElementsByClassName("red");
-  let blue = document.getElementsByClassName("blue");
-  let green = document.getElementsByClassName("green");
-  while (n > 0) {
-    let flag = true;
-    if (n > 0 && i < 5) {
-      red[i].classList.toggle("red-animate");
-      ++i;
-      --n;
-      flag = false;
-    }
-    if (n > 0 && j < 5) {
-      blue[j].classList.toggle("blue-animate");
-      ++j;
-      --n;
-      flag = false;
-    }
-    if (n > 0 && k < 5) {
-      green[k].classList.toggle("green-animate");
-      ++k;
-      --n;
-      flag = false;
-    }
-    if (flag) break;
+  if (15 - st.size < n) {
+    alert("Not enough balls available");
+    return;
   }
+  let balls = document.getElementsByClassName("ball");
+  while (n > 0) {
+    index = Math.floor(Math.random() * 15);
+    if (st.has(index)) continue;
+    else {
+      if (balls[index].classList.contains("red"))
+        balls[index].classList.toggle("red-animate");
+      else if (balls[index].classList.contains("blue"))
+        balls[index].classList.toggle("blue-animate");
+      else balls[index].classList.toggle("green-animate");
+      --n;
+      st.add(index);
+    }
+    console.log(n);
+  }
+  return;
 };
 btn.addEventListener("click", handleBtn);
+//random sol- consider all arrays as one (done)
+// responsive sol- meadia query and change alignment for small screens
+// top border visible sol- (done)
+//
